@@ -1,4 +1,26 @@
+//show the filter
+//var filterButton=document.getElementById("filterButton")
+//filterButton.addEventListener("click", showFilter);
 
+
+// commenting out all the filter stuff 
+/*
+function showFilter(){
+    filter.style.display= "inline-block";
+}
+
+//filter close button
+var closeButton=document.getElementById("closeButton")
+closeButton.addEventListener("click", hideFilter);
+
+var goButton=document.getElementById("goButton")
+goButton.addEventListener("click", createMyArray);
+
+function hideFilter()
+{
+    filter.style.display= "none";
+}
+*/
 
 runGame();
 
@@ -39,7 +61,19 @@ function reset()
 {
    checkCheckboxes();
 }
+*/
 
+/*function checkCheckboxes()
+{
+   //doesn't work
+    if ("Additional Tags" == true)
+    {
+        objIndex = allData.findIndex((obj => obj.fandom == "Additional"));
+        allData[objIndex].selected = true;
+        console.log("additional is marked true");
+    }
+}
+*/
 function displayQuestion()
 {
     console.log("firstTime is " + firstTime);
@@ -85,7 +119,18 @@ function displayValues()
     console.log(secondTag + " has " );
 }
 
-
+/*function getIndex1()
+       {
+        index1= Math.floor(Math.random() * 298);
+        console.log(index1);
+        return index1;
+       }
+function getIndex2()
+       {
+        index2= Math.floor(Math.random() * 298);
+        return index2;
+       }
+*/
 function pickSecond()
 {
     index2= Math.floor(Math.random() * 298);
@@ -103,8 +148,17 @@ function compareValues()
     }
 }
 
+//on event filter go clicked
+   // runGame();
 
+/*//on event higher clicked
+var higherButton=document.getElementById("higher")
+higherButton.addEventListener("click", checkResponseHigher());
 
+//on event lower clicked
+var lowerButton=document.getElementById("lower")
+lowerButton.addEventListener("click", checkResponseLower());
+*/
 function checkResponseHigher()
 {
     console.log("higher clicked");
