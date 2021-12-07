@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body id = "game">
+
+    <header>
+
+
+    </header>
+
+    <main>
+        <div id= "mainBox">
+
+            <h1 class= "subheading" id="playSubheading">Random Fandom Game</h1>
+            <h2 class="scoreCount">Score: </h2>
+            <h2 id="scoreSlot" class="scoreCount"></h2>
+            <br>
+            <br>
+            <h2 id = "blank1" class = "blank">Tag 1</h2>
+            <h2 id = "gametext1" class = "gameText"> has </h2>
+            <h2 id = "blank2" class = "blank"> x </h2>
+            <h2 id = "gametext2" class = "gameText">works.</h2>
+            <h2 id = "blank3" class = "blank">Tag 2</h2>
+            <h2 id = "gametext3" class = "gameText"> has</h2>
+            <br>
+            <button id = "higher" onclick= "checkResponseHigher()">Higher</button>
+            <br>
+            <button id = "lower" onclick = "checkResponseLower()">Lower</button>
+            <br>
+            <br>
+            <h2 id = "gametext4" class = "gameText">works.</h2>
+
+        </div>
+      
+        <div id ="correct" class= "popup">
+            <h3> Correct!</h3>
+            <h2 id= "correctTag" class= "blank">Second tag</h2>
+            <h2>has </h2>
+            <h2 id = "correctBlank" class= "blank">y </h2>
+            <h2>works!"</h2>
+        </div>
+
+        <div id ="incorrect" class = "popup">
+            <h1 id="gameOver"> Game Over!</h1>
+            <br>
+            <h2 id= "incorrectTag" class= "blank">Second tag</h2> 
+            <h2>has</h2>
+            <h2 id = "incorrectBlank" class= "blank">y </h2>
+            <h2>works!" <br> <br> Your Score was </h2>
+            <h2 id="finalScore" class= "blank"></h2>
+            <br>
+            <a href = "game.html"><button>Play Again</button></a>
+            <a href = "index.html"><button>Home</button></a>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+<script src="data.js" defer></script>
+<script src="/script.js" defer></script>
+</html>
