@@ -1,0 +1,273 @@
+*{
+    margin:0px;
+    font-family:'Lucida Grande','Lucida Sans Unicode','GNU Unifont',Verdana,Helvetica,sans-serif;
+    text-align:center;
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#990000;
+    margin: 1em;
+}
+
+h2{
+    padding-bottom:.5em;
+}
+
+p{
+    padding: 10px;
+}
+
+.gameText
+{
+    display:inline-block;
+}
+.blank, #correctBlank, #incorrectBlank
+{
+    display:inline-block;
+    color:#990000;
+}
+.scoreCount
+{
+    display:inline;
+}
+
+#filterButton{
+    font-size: 100%;
+    width: 4em;
+    padding:.2em .7em .2em .7em;
+    text-align:right;
+    margin:.4em;
+}
+
+#goButton {
+    font-size: 100%;
+    width: 4em;
+    padding:.2em .7em .2em .7em;
+    margin:.4em;
+}
+
+#closeButton{
+    font-size: 100%;
+    width: 4em;
+    padding:.2em .7em .2em .7em;
+    margin:.4em;
+}
+
+#filterBttnWrap{
+    text-align: right;
+}
+
+.aCheckbox
+{
+    text-align:left;
+}
+
+button{
+    background: #eee;
+    color: #444;
+    font-size: 150%;
+    padding: .25em .75em .25em .75em;
+    border: 1px solid #bbb;
+    border-bottom: 1px solid #aaa;
+    border-radius: .25em;
+    box-shadow: none;
+    margin:.3em;
+    text-decoration: none;
+    display:inline-block;
+    width:10em;
+    background-image: linear-gradient(#fff 2%,#ddd 95%,#bbb 100%);
+    text-align:center;
+    cursor:pointer;
+}
+
+
+#mainBox{
+    border: 2px solid #ccc;
+    margin-top: 3em;
+    margin-bottom:3em;
+    margin-left:3.5em;
+    margin-right:3.5em;;
+    padding:1em;
+    background: #eaeaea;
+    box-shadow: inset 1px 0 5px #999;
+}
+
+#filter{
+    border: 2px solid #ccc;
+    padding:1em;
+    background: #eaeaea;
+    box-shadow: inset 1px 0 5px #999;
+}
+
+.subheading{
+    padding-top:.5em;;
+    margin:.3em 0em .3em 0em;
+    font-size:3.5em
+}
+
+#homeSubtitle{
+    margin:0em 0em 1em 0em;
+}
+
+#playSubheading{
+    padding-top:0;
+    font-size:36px;
+}
+
+.popup{
+    border: 2px solid #ccc;
+    background: #eaeaea;
+    box-shadow: inset 1px 0 5px #999;
+    display:none;
+    padding:1em;
+}
+
+#filter{
+    display:none;
+}
+
+#checkboxes{
+    padding:.5em;
+}
+
+/*.aCheckbox{
+    border:solid black 5px;
+}
+*/
+
+#correct, #incorrect
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:19em;
+    padding:1em;
+}
+
+
+#gameOver
+{
+    padding-left:1em;
+    padding-right:1em;
+    color:black;
+}
+
+
+
+
+
+
+
+/*computer*/
+@media only screen and (min-width: 768px) {
+
+
+    #disclaimer{
+        width: 100%;
+        margin:0;
+        display:block;
+        background-color: #990000;
+        color: white;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        padding:.7rem;
+    }
+
+    h2{
+        padding-bottom:1.5em;
+    }
+
+    p{
+        margin:2em;
+    }
+
+    #filterButton{
+        display:initial;
+    }
+
+    .popup{
+        position:absolute;
+        top:3em;
+        right:17em;
+    }
+
+    #mainBox{
+        margin-left:25%;
+        margin-right:25%;
+    }
+
+    #correct, #incorrect
+    {
+        margin-left:auto;
+        margin-right:15em;
+        width:24em;
+        padding:1em;
+    }
+}
+
+
+
+/*mobile*/
+@media only screen and (max-width: 500px) {
+    button{
+        padding: .30em .80em .39em .80em;
+        border-radius: .25em;
+        margin:.3em;
+    }
+    
+    .subheading{
+        padding-top:.5em;;
+        margin:0em 0em .3em 0em;
+        font-size:3.5em
+    }
+    
+    #homeSubtitle{
+        margin:0em 0em 1em 0em;
+    }
+
+    #mainBox{
+        padding:.5em;
+    }
+
+
+    #correct, #incorrect
+    {
+        position:absolute;
+        top:3em;
+        right:1em;
+        width:19em;
+        padding:1em;
+    }
+}
+
+/*very small mobile*/
+@media only screen and (max-width: 400px) {
+    button{
+        padding: .30em .80em .39em .80em;
+        border-radius: .25em;
+        margin:.3em;
+    }
+    
+    .subheading{
+        padding-top:.5em;;
+        margin:0em 0em .3em 0em;
+        font-size:3.5em
+    }
+    
+    #homeSubtitle{
+        margin:0em 0em 1em 0em;
+    }
+
+    #mainBox{
+    margin-left:8%;
+    margin-right:8%;
+    }
+
+    .popup{
+        position:absolute;
+        top:3em;
+        right:5%;
+    }
+}
+
