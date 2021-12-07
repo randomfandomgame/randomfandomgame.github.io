@@ -228,4 +228,3 @@ function displayCorrectScreen()
 //on event play again button clicked
     reset();
     runGame();
-
