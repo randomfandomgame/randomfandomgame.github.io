@@ -24,21 +24,20 @@ p{
 }
 .blank, #correctBlank, #incorrectBlank
 {
-    display:inline-block;
+    display:inline;
     color:#990000;
 }
+
+.popupText
+{
+    display:inline;
+}
+
 .scoreCount
 {
     display:inline;
 }
 
-#filterButton{
-    font-size: 100%;
-    width: 4em;
-    padding:.2em .7em .2em .7em;
-    text-align:right;
-    margin:.4em;
-}
 
 #goButton {
     font-size: 100%;
@@ -58,10 +57,6 @@ p{
     text-align: right;
 }
 
-.aCheckbox
-{
-    text-align:left;
-}
 
 button{
     background: #eee;
@@ -93,12 +88,6 @@ button{
     box-shadow: inset 1px 0 5px #999;
 }
 
-#filter{
-    border: 2px solid #ccc;
-    padding:1em;
-    background: #eaeaea;
-    box-shadow: inset 1px 0 5px #999;
-}
 
 .subheading{
     padding-top:.5em;;
@@ -116,34 +105,29 @@ button{
 }
 
 .popup{
+    position:absolute;
+    top:3em;
+    right:3.5em;
     border: 2px solid #ccc;
     background: #eaeaea;
     box-shadow: inset 1px 0 5px #999;
-    display:none;
-    padding:1em;
+    display:none;     
 }
 
-#filter{
-    display:none;
-}
-
-#checkboxes{
-    padding:.5em;
-}
-
-/*.aCheckbox{
-    border:solid black 5px;
-}
-*/
-
-#correct, #incorrect
+#incorrectHigher, #incorrectLower
 {
-    margin-left:auto;
-    margin-right:auto;
-    width:19em;
-    padding:1em;
+    padding-right:4em;
+    padding-left:4em;
+    padding-top:1em;
+    padding-bottom:4em;
 }
 
+#correct
+{
+    top:13em;
+    right:27em;
+    padding:3em;
+}
 
 #gameOver
 {
@@ -159,7 +143,7 @@ button{
 
 
 /*computer*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1000px) {
 
 
     #disclaimer{
@@ -182,92 +166,116 @@ button{
         margin:2em;
     }
 
-    #filterButton{
-        display:initial;
-    }
-
-    .popup{
-        position:absolute;
-        top:3em;
-        right:17em;
-    }
 
     #mainBox{
         margin-left:25%;
         margin-right:25%;
     }
 
-    #correct, #incorrect
+    #incorrectHigher, #incorrectLower
     {
-        margin-left:auto;
-        margin-right:15em;
-        width:24em;
-        padding:1em;
+        padding-left:7em;
+        padding-right:7em;
+        padding-top:3.5em;
+        padding-bottom:3.5em;
+        right:25%;
+        top:5%;
+    }
+
+    #correct
+    {
+        right:35%;
     }
 }
 
+/*in betweem, ipad goes here */
+@media only screen and (max-width: 1000px) 
+{
+    #incorrectHigher, #incorrectLower
+    {
+        padding-left:5em;
+        padding-right:5em;
+        right:5%
+    }
 
+    #correct
+    {
+        right:40%;
+    }
+}
 
 /*mobile*/
-@media only screen and (max-width: 500px) {
-    button{
+@media only screen and (max-width: 767) 
+{
+    button
+    {
         padding: .30em .80em .39em .80em;
         border-radius: .25em;
         margin:.3em;
     }
     
-    .subheading{
+    .subheading
+    {
         padding-top:.5em;;
         margin:0em 0em .3em 0em;
         font-size:3.5em
     }
     
-    #homeSubtitle{
+    #homeSubtitle
+    {
         margin:0em 0em 1em 0em;
     }
 
-    #mainBox{
+    #mainBox
+    {
         padding:.5em;
     }
 
-
-    #correct, #incorrect
+    #incorrectHigher, #incorrectLower
     {
-        position:absolute;
-        top:3em;
-        right:1em;
-        width:19em;
-        padding:1em;
+        right:0%
     }
+
+    #correct
+    {
+        right:1em;
+    }
+
 }
 
 /*very small mobile*/
-@media only screen and (max-width: 400px) {
-    button{
+@media only screen and (max-width: 500px) 
+{
+    button
+    {
         padding: .30em .80em .39em .80em;
         border-radius: .25em;
         margin:.3em;
     }
     
-    .subheading{
+    .subheading
+    {
         padding-top:.5em;;
         margin:0em 0em .3em 0em;
         font-size:3.5em
     }
     
-    #homeSubtitle{
+    #homeSubtitle
+    {
         margin:0em 0em 1em 0em;
     }
 
     #mainBox{
+
     margin-left:8%;
     margin-right:8%;
     }
 
-    .popup{
-        position:absolute;
-        top:3em;
-        right:5%;
+    #incorrectHigher, #incorrectLower
+    {
+        padding-right:1em;
+        padding-left:1em;
+        right:0%;
     }
-}
 
+}
