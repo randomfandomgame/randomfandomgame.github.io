@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play|Random Fandom Game</title>
+    <title>Random Fandom Game|Play</title>
 
     <link rel="stylesheet" href="/styles.css" />
 </head>
@@ -17,6 +17,11 @@
 
     <main>
         <div id= "mainBox">
+            
+            <!--<div id="filterBttnWrap"> 
+                 <button id="filterButton">Filter</button>
+            </div>
+            -->
 
             <h1 class= "subheading" id="playSubheading">Random Fandom Game</h1>
             <h2 class="scoreCount">Score: </h2>
@@ -38,28 +43,109 @@
             <h2 id = "gametext4" class = "gameText">works.</h2>
 
         </div>
-      
+        <!--
+        <div id= "filter">
+            <h3> Filter</h3>
+
+            <div id="checkboxes">
+                <div class= aCheckbox id= "Additional Tags">
+                <input type = "checkbox"> Additional Tags </input>
+                <br>
+                </div>
+                <div class= aCheckbox id= "Genshin Impact">
+                    <input type = "checkbox"> Genshin Impact </input>
+                    <br>
+                    </div>
+                <div class= aCheckbox id = "Fullmetal Alchemist">
+                    <input type = "checkbox"> Fullmetal Alchemist </input>
+                    <br>
+                 </div>
+                 <div class= aCheckbox id = "Hunter x Hunter"></div>
+                    <input type = "checkbox"> Hunter x Hunter </input>
+                    <br>
+                 </div>
+                 <div class= aCheckbox id = "Marvel">
+                    <input type = "checkbox"> Marvel </input>
+                    <br>
+                 </div>
+                 <div class= aCheckbox id = "Star Wars">
+                    <input type = "checkbox"> Star Wars </input>
+                    <br>
+                 </div>
+                 <div class= aCheckbox id = "Harry Potter">
+                    <input type = "checkbox"> Harry Potter </input>
+                    <br>
+                 </div>
+                 <div class= aCheckbox id = "Supernatural">
+                    <input type = "checkbox"> Supernatural </input>
+                    <br>
+                 </div>
+                 <div class= aCheckbox id = "Misc. RPF">
+                    <input type = "checkbox"> Misc. RPF </input>
+                 </div>
+            </div>
+            <br>
+            <button id="closeButton">Close</button>
+            <br>
+            <button id="goButton">Go</button>
+        </div>
+    -->
         <div id ="correct" class= "popup">
-            <h3> Correct!</h3>
+            <h2> Correct!</h2>
             <h2 id= "correctTag" class= "blank">Second tag</h2>
-            <h2>has </h2>
+            <h2 class= "popupText">has </h2>
             <h2 id = "correctBlank" class= "blank">y </h2>
-            <h2>works!"</h2>
+            <h2 class= "popupText">works!"</h2>
         </div>
 
-        <div id ="incorrect" class = "popup">
+        <div id ="incorrectHigher" class = "popup">
             <h1 id="gameOver"> Game Over!</h1>
-            <br>
+
             <h2 id= "incorrectTag" class= "blank">Second tag</h2> 
-            <h2>has</h2>
-            <h2 id = "incorrectBlank" class= "blank">y </h2>
-            <h2>works!" <br> <br> Your Score was </h2>
+            <h2 class= "popupText">only has</h2>
+            <h2 id = "incorrectBlank" >y </h2>
+            <h2 class= "popupText">works!</h2>
+            <br>
+            <h2 id="otherTag" class= "blank"> </h2> 
+            <h2 class= "popupText"> has</h2>
+            <h2 id = "otherWorks" class= "blank"> </h2>
+            <h2 class= "popupText">. <br> That's </h2>
+            <h2 id="higherDiff" class= "blank"></h2>
+            <h2> less!</h2>
+            <br>
+             <h2 class= "popupText">Your Score was </h2>
             <h2 id="finalScore" class= "blank"></h2>
+            <br>
             <br>
             <a href = "game.html"><button>Play Again</button></a>
             <a href = "index.html"><button>Home</button></a>
         </div>
 
+
+        <div id ="incorrectLower" class = "popup">
+            <h1 id="gameOver"> Game Over!</h1>
+
+            <h2 id= "incorrectTagL" class= "blank">Second tag</h2> 
+            <h2 class= "popupText">actually has </h2>
+            <h2 id = "incorrectBlankL" class= "blank">y </h2>
+            <h2 class= "popupText">works!</h2>
+            <br>
+            <h2 id="otherTagL" class= "blank"> </h2> 
+            <h2 class= "popupText"> has </h2>
+            <h2 id = "otherWorksL" class= "blank"> </h2>
+            <h2 class= "popupText">. <br> That's </h2>
+            <h2 id="lowerDiff" class= "blank"></h2>
+            <h2> more!</h2>
+            <br>
+             <h2 class= "popupText">Your Score was </h2>
+            <h2 id="finalScoreL" class= "blank"></h2>
+            <br>
+            <br>
+            <a href = "game.html"><button>Play Again</button></a>
+            <a href = "index.html"><button>Home</button></a>
+        </div>
+
+    
     </main>
 
     <footer>
