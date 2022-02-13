@@ -57,6 +57,25 @@ p{
     text-align: right;
 }
 
+#filterButton
+{
+    font-size: 100%;
+    width: 4em;
+    padding:.2em .7em .2em .7em;
+    margin:.4em;
+}
+
+#filter
+{
+    position:absolute;
+    top:1em;
+    right:1em;
+    border: 2px solid #ccc;
+    background: #eaeaea;
+    box-shadow: inset 1px 0 5px #999;
+   display:"none"; 
+}
+
 
 button{
     background: #eee;
@@ -108,16 +127,20 @@ button{
     position:absolute;
     top:3em;
     right:3.5em;
+    left:3.5em;
     border: 2px solid #ccc;
     background: #eaeaea;
     box-shadow: inset 1px 0 5px #999;
     display:none;     
 }
 
+.popupWrap
+{
+    text-align:center;
+}
+
 #incorrectHigher, #incorrectLower
 {
-    padding-right:4em;
-    padding-left:4em;
     padding-top:1em;
     padding-bottom:4em;
 }
@@ -125,7 +148,8 @@ button{
 #correct
 {
     top:13em;
-    right:27em;
+    right:25em;
+    left:25em;
     padding:3em;
 }
 
@@ -136,7 +160,24 @@ button{
     color:black;
 }
 
+#filterBttnWrap{
+    text-align: right;
+    padding:none;
+    
+ }
 
+ #checkboxes
+ {
+     text-align:left;
+ }
+
+ #filter
+ {
+     padding:1em;
+     position:absolute;
+    top:3em;
+    right:4em;
+ }
 
 
 
@@ -174,38 +215,30 @@ button{
 
     #incorrectHigher, #incorrectLower
     {
-        padding-left:7em;
-        padding-right:7em;
         padding-top:3.5em;
         padding-bottom:3.5em;
-        right:25%;
+        right:20em;
+        left:20em;
         top:5%;
     }
 
-    #correct
-    {
-        right:35%;
-    }
+ 
+
 }
 
 /*in betweem, ipad goes here */
 @media only screen and (max-width: 1000px) 
 {
-    #incorrectHigher, #incorrectLower
-    {
-        padding-left:5em;
-        padding-right:5em;
-        right:5%
-    }
 
     #correct
     {
-        right:40%;
+        left:2em;
+        right:2em;
     }
 }
 
 /*mobile*/
-@media only screen and (max-width: 767) 
+/*@media only screen and (max-width: 767) 
 {
     button
     {
@@ -238,10 +271,13 @@ button{
 
     #correct
     {
-        right:1em;
+        left:2em;
+        right:2em;
     }
 
+
 }
+*/
 
 /*very small mobile*/
 @media only screen and (max-width: 500px) 
@@ -271,11 +307,11 @@ button{
     margin-right:8%;
     }
 
-    #incorrectHigher, #incorrectLower
+    #correct, #incorrectLower, #incorrectHigher
     {
-        padding-right:1em;
-        padding-left:1em;
-        right:0%;
+        left:1em;
+        right:1em;
     }
+
 
 }
