@@ -18,10 +18,10 @@
     <main>
         <div id= "mainBox">
             
-            <!--<div id="filterBttnWrap"> 
+            <div id="filterBttnWrap"> 
                  <button id="filterButton">Filter</button>
             </div>
-            -->
+   
 
             <h1 class= "subheading" id="playSubheading">Random Fandom Game</h1>
             <h2 class="scoreCount">Score: </h2>
@@ -43,54 +43,58 @@
             <h2 id = "gametext4" class = "gameText">works.</h2>
 
         </div>
-        <!--
-        <div id= "filter">
+       <div id = "filter">
+              
             <h3> Filter</h3>
-
-            <div id="checkboxes">
-                <div class= aCheckbox id= "Additional Tags">
-                <input type = "checkbox"> Additional Tags </input>
+           
                 <br>
-                </div>
-                <div class= aCheckbox id= "Genshin Impact">
-                    <input type = "checkbox"> Genshin Impact </input>
+           
+                <div id= "checkboxes">
+                <input type="checkbox" id="Additional Tags" name="Additional Tags" value="yes" class= "aCheckbox"> 
+                <label for="Additional Tags"> Additional Tags </label>
+                <br>
+  
+                <input type="checkbox" id="Genshin Impact" name="Genshin Impact" value="yes" class= "aCheckbox"> 
+                <label for="Genshin Impact"> Genshin Impact </label>
+                <br>
+  
+                <input type="checkbox" id="Fullmetal Alchemist" name="Fullmetal Alchemist" value="yes" class= "aCheckbox"> 
+                <label for="Fullmetal Alchemist"> Fullmetal Alchemist</label>
+                 <br>
+  
+                 <input type="checkbox" id="Hunter x Hunter" name="Hunter x Hunter" value="yes" class= "aCheckbox"> 
+                <label for="Hunter x Hunter"> Hunter x Hunter</label>
+                 <br>
+  
+                 <input type="checkbox" id="Marvel" name="Marvel" value="yes" class= "aCheckbox"> 
+                <label for="Marvel"> Marvel</label>
+                 <br>
+  
+                 <input type="checkbox" id="Star Wars" name="Star Wars" value="yes" class= "aCheckbox"> 
+                 <label for="Star Wars"> Star Wars</label>
+                  <br>
+  
+                  <input type="checkbox" id="Harry Potter" name="Harry Potter" value="yes" class= "aCheckbox"> 
+                  <label for="Harry Potter"> Harry Potter</label>
+                   <br>
+  
+                <input type="checkbox" id="Supernatural" name="Supernatural" value="yes" class= "aCheckbox"> 
+                   <label for="Supernatural"> Supernatural</label>
                     <br>
+  
+                  <input type="checkbox" id="Misc. RPF" name="Misc. RPF" value="yes" class= "aCheckbox"> 
+                    <label for="Misc. RPF"> Misc. RPF</label>
+                     <br>
                     </div>
-                <div class= aCheckbox id = "Fullmetal Alchemist">
-                    <input type = "checkbox"> Fullmetal Alchemist </input>
-                    <br>
-                 </div>
-                 <div class= aCheckbox id = "Hunter x Hunter"></div>
-                    <input type = "checkbox"> Hunter x Hunter </input>
-                    <br>
-                 </div>
-                 <div class= aCheckbox id = "Marvel">
-                    <input type = "checkbox"> Marvel </input>
-                    <br>
-                 </div>
-                 <div class= aCheckbox id = "Star Wars">
-                    <input type = "checkbox"> Star Wars </input>
-                    <br>
-                 </div>
-                 <div class= aCheckbox id = "Harry Potter">
-                    <input type = "checkbox"> Harry Potter </input>
-                    <br>
-                 </div>
-                 <div class= aCheckbox id = "Supernatural">
-                    <input type = "checkbox"> Supernatural </input>
-                    <br>
-                 </div>
-                 <div class= aCheckbox id = "Misc. RPF">
-                    <input type = "checkbox"> Misc. RPF </input>
-                 </div>
+                <br>
+                <div id = "buttonWrap">
+                <button id="closeButton">Close</button>
+                <br>
+                <button id="goButton">Go</button>
             </div>
-            <br>
-            <button id="closeButton">Close</button>
-            <br>
-            <button id="goButton">Go</button>
-        </div>
-    -->
-        <div id ="correct" class= "popup">
+         </div>   
+
+        <div id ="correct" class = "popup" class ="feedback">
             <h2> Correct!</h2>
             <h2 id= "correctTag" class= "blank">Second tag</h2>
             <h2 class= "popupText">has </h2>
@@ -98,7 +102,8 @@
             <h2 class= "popupText">works!"</h2>
         </div>
 
-        <div id ="incorrectHigher" class = "popup">
+        <div id ="incorrectHigher" class = "popup" class ="feedback" class ="incorrect">
+           <div class="popupWrap">
             <h1 id="gameOver"> Game Over!</h1>
 
             <h2 id= "incorrectTag" class= "blank">Second tag</h2> 
@@ -117,12 +122,14 @@
             <h2 id="finalScore" class= "blank"></h2>
             <br>
             <br>
-            <a href = "game.html"><button>Play Again</button></a>
+           <button id = "playAgainHigher" onclick= "runGame()">Play Again</button>
             <a href = "index.html"><button>Home</button></a>
+        </div>
         </div>
 
 
-        <div id ="incorrectLower" class = "popup">
+        <div id ="incorrectLower" class = "popup" class ="feedback" class ="incorrect">
+            <div class="popupWrap">
             <h1 id="gameOver"> Game Over!</h1>
 
             <h2 id= "incorrectTagL" class= "blank">Second tag</h2> 
@@ -141,8 +148,9 @@
             <h2 id="finalScoreL" class= "blank"></h2>
             <br>
             <br>
-            <a href = "game.html"><button>Play Again</button></a>
+            <button id= "playAgainLower" onclick= "runGame()">Play Again</button>
             <a href = "index.html"><button>Home</button></a>
+            </div>
         </div>
 
     
