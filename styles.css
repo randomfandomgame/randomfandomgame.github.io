@@ -179,7 +179,17 @@ button{
     right:4em;
  }
 
-
+ #disclaimer{
+    width: 100%;
+    margin:0;
+    display:block;
+    background-color: #990000;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    padding:.7rem;
+}
 
 
 
@@ -311,6 +321,11 @@ button{
     {
         left:1em;
         right:1em;
+    }
+
+    #filter
+    {
+        display:none;
     }
 
 
