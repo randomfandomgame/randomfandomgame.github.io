@@ -3508,7 +3508,7 @@ let allData =
         "index": 439,
         "type": "Relationship",
         "name": "Harry Potter/Severus Snape",
-        "number": 22011,
+        "number": 15384,
         "fandom": "Harry Potter",
         "selected": false
     },
