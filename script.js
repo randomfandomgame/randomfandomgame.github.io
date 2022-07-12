@@ -27,7 +27,16 @@ supernatural = document.getElementById("Supernatural");
 supernatural.addEventListener("click", checkSupernatural);
 
 miscRPF = document.getElementById("Misc. RPF");
-supernatural.addEventListener("click", checkRPF);
+miscRPF.addEventListener("click", checkRPF);
+
+myHeroAcademia = document.getElementById("My Hero Academia");
+myHeroAcademia.addEventListener("click", checkMHA);
+
+sherlock = document.getElementById("Sherlock (TV)");
+sherlock.addEventListener("click", checkSherlock);
+
+teenWolf = document.getElementById("Teen Wolf (TV)");
+teenWolf.addEventListener("click", checkTeenWolf);
 
 let newArray=allData;
 let addtlArray;
@@ -39,6 +48,9 @@ let SWArray;
 let HPArray;
 let supernaturalArray;
 let RPFArray;
+let MHAArray;
+let sherlockArray;
+let teenWolfArray;
 
 function showFilter()
 {
@@ -61,6 +73,9 @@ var SWClicked = false;
 var HPClicked = false;
 var supernaturalClicked = false;
 var RPFClicked=false;
+var MHAClicked = false;
+var sherlockClicked = false;
+var teenWolfClicked = false;
  
 function checkAddtl()
 {
@@ -183,8 +198,48 @@ function checkMarvel()
       console.log(RPFClicked);
    }
 
+   function checkMHA()
+   {
+       if (MHAClicked == false)
+       {
+           MHAClicked=true;
+       }
+       else
+       {
+           MHAClicked=false;
+       }
+       console.log(MHAClicked);
+    }
+
+    function checkSherlock()
+    {
+        if (sherlockClicked == false)
+        {
+            sherlockClicked=true;
+        }
+        else
+        {
+            sherlockClicked=false;
+        }
+        console.log(sherlockClicked);
+     }
+
+     function checkTeenWolf()
+    {
+        if (teenWolfClicked == false)
+        {
+            teenWolfClicked=true;
+        }
+        else
+        {
+            teenWolfClicked=false;
+        }
+        console.log(teenWolfClicked);
+     }
+
 function startToFilter()
 {
+    document.getElementById("filter").style.display="none";
     console.log("startTofilter");
    if (addtlClicked==true)
    {
@@ -285,8 +340,40 @@ function startToFilter()
        console.log(RPFArray);
    }
 
+   if (MHAClicked==true)
+   {
+    MHAArray = allData.filter(data => data.fandom === 'My Hero Academia');
+   console.log(MHAArray);
+   }
+   else if (MHAClicked==false)
+   {
+        MHAArray= [];
+       console.log(MHAArray);
+   }
 
-   let tempArray = addtlArray.concat(genshinArray, fullmetalArray, hunterArray, marvelArray, SWArray, HPArray, supernaturalArray, RPFArray);
+   if (sherlockClicked==true)
+   {
+    sherlockArray = allData.filter(data => data.fandom === 'Sherlock (TV)');
+   console.log(sherlockArray);
+   }
+   else if (sherlockClicked==false)
+   {
+        sherlockArray= [];
+       console.log(sherlockArray);
+   }
+
+   if (teenWolfClicked==true)
+   {
+    teenWolfArray = allData.filter(data => data.fandom === 'Teen Wolf (TV)');
+   console.log(teenWolfArray);
+   }
+   else if (teenWolfClicked==false)
+   {
+        teenWolfArray= [];
+       console.log(teenWolfArray);
+   }
+
+   let tempArray = addtlArray.concat(genshinArray, fullmetalArray, hunterArray, marvelArray, SWArray, HPArray, supernaturalArray, RPFArray, MHAArray, sherlockArray, teenWolfArray);
    tempArray.pop();
    newArray=tempArray;
 
