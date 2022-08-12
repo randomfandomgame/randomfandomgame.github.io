@@ -38,6 +38,15 @@ sherlock.addEventListener("click", checkSherlock);
 teenWolf = document.getElementById("Teen Wolf (TV)");
 teenWolf.addEventListener("click", checkTeenWolf);
 
+haikyuu = document.getElementById("Haikyuu!!");
+haikyuu.addEventListener("click", checkHaikyuu);
+
+dreamSMP = document.getElementById("Dream SMP");
+dreamSMP.addEventListener("click", checkDreamSMP);
+
+DCU = document.getElementById("DCU");
+DCU.addEventListener("click", checkDCU);
+
 let newArray=allData;
 let addtlArray;
 let genshinArray;
@@ -51,6 +60,9 @@ let RPFArray;
 let MHAArray;
 let sherlockArray;
 let teenWolfArray;
+let haikyuuArray;
+let dreamSMPArray;
+let DCUArray;
 
 function showFilter()
 {
@@ -76,6 +88,9 @@ var RPFClicked=false;
 var MHAClicked = false;
 var sherlockClicked = false;
 var teenWolfClicked = false;
+var haikyuuClicked = false;
+var dreamSMPClicked = false;
+var DCUClicked = false;
  
 function checkAddtl()
 {
@@ -237,6 +252,47 @@ function checkMarvel()
         console.log(teenWolfClicked);
      }
 
+       
+     function checkHaikyuu()
+     {
+         if (haikyuuClicked == false)
+         {
+             haikyuuClicked=true;
+         }
+         else
+         {
+             haikyuuClicked=false;
+         }
+         console.log(haikyuuClicked);
+      }
+
+
+     function checkDreamSMP()
+    {
+        if (dreamSMPClicked == false)
+        {
+            dreamSMPClicked=true;
+        }
+        else
+        {
+            dreamSMPClicked=false;
+        }
+        console.log(dreamSMPClicked);
+     }
+
+     function checkDCU()
+    {
+        if (DCUClicked == false)
+        {
+            DCUClicked=true;
+        }
+        else
+        {
+            DCUClicked=false;
+        }
+        console.log(DCUClicked);
+     }
+   
 function startToFilter()
 {
     document.getElementById("filter").style.display="none";
@@ -373,7 +429,40 @@ function startToFilter()
        console.log(teenWolfArray);
    }
 
-   let tempArray = addtlArray.concat(genshinArray, fullmetalArray, hunterArray, marvelArray, SWArray, HPArray, supernaturalArray, RPFArray, MHAArray, sherlockArray, teenWolfArray);
+   if (haikyuuClicked==true)
+   {
+    haikyuuArray = allData.filter(data => data.fandom === 'Haikyuu!!');
+   console.log(haikyuuArray);
+   }
+   else if (haikyuuClicked==false)
+   {
+        haikyuuArray= [];
+       console.log(haikyuuArray);
+   }
+
+   if (dreamSMPClicked==true)
+   {
+    dreamSMPArray = allData.filter(data => data.fandom === 'Dream SMP');
+   console.log(dreamSMPArray);
+   }
+   else if (dreamSMPClicked==false)
+   {
+        dreamSMParray= [];
+       console.log(dreamSMPArray);
+   }
+
+   if (DCUClicked==true)
+   {
+    DCUArray = allData.filter(data => data.fandom === 'DCU');
+   console.log(DCUArray);
+   }
+   else if (DCUClicked==false)
+   {
+        DCUArray= [];
+       console.log(DCUArray);
+   }
+
+   let tempArray = addtlArray.concat(genshinArray, fullmetalArray, hunterArray, marvelArray, SWArray, HPArray, supernaturalArray, RPFArray, MHAArray, sherlockArray, teenWolfArray, haikyuuArray, dreamSMPArray, DCUArray);
    tempArray.pop();
    newArray=tempArray;
 
