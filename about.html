@@ -4,17 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Fandom Game|About</title>
+    <title>Random Fandom Game|Play</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
     <link rel="stylesheet" href="/styles.css" />
-
-	<script src="/script.js" defer></script>
-
-    <script src="/data.js" defer></script>
-    
 </head>
-<body id = "about">
+<body id = "game">
 
     <header>
 
@@ -23,33 +18,176 @@
 
     <main>
         <div id= "mainBox">
+            
+            <div id="filterBttnWrap"> 
+                 <button id="filterButton">Filter</button>
+            </div>
+   
 
-            <h1 class= "subheading">About</h1>
-
-            <p> Random Fandom Game is made by someone with way too much time on their hands and not nearly enough coding skill. 
-                Data has been collected using <a href= "https://github.com/fandomstats/toastystats">this data scraper </a> as put created by <a href = "https://toastystats.tumblr.com/">ToastyStats</a> 
-                <a href = "https://destinationtoast.tumblr.com/"> (destinationtoast)</a> on Tumblr. 
-                   Current tags consist of popular additional tags, as well as top character and fandom tags, 
-                   as typically seen in the AO3 filter sidebar. 
-                    This has been modified slightly in cases where the same character or relationship is known under several names. 
-                    Data was collected from 7/6/2022-7/11/2022. Earlier versions of the game used data from March 2021, and included bookmark tags in the count, which accounts for discrepancies. 
-                    Current data is scraped from the tag's webpage, so counts reflect the number you would typically see on a tag's page. 
-                    Also, the tags included in this game are in no way representative of the Archive as a whole. 
-                    Tags are included or excluded to provide the best experience for the most amount of people. 
-                    Random Fandom Game is not affiliated with AO3 or the OTW. <br> <br> @randomfandomgame on TikTok and <a href = "https://randomfandomgame.tumblr.com/" >Tumblr.</a></p>
-
-            <a href = "game.html"><button>Play</button></a>
+            <h1 class= "subheading" id="playSubheading">Random Fandom Game</h1>
+            <h2 class="scoreCount">Score: </h2>
+            <h2 id="scoreSlot" class="scoreCount"></h2>
             <br>
-            <a href = "index.html"><button>Back</button></a>
+            <br>
+            <h2 id = "blank1" class = "blank">Tag 1</h2>
+            <h2 id = "gametext1" class = "gameText"> has </h2>
+            <h2 id = "blank2" class = "blank"> x </h2>
+            <h2 id = "gametext2" class = "gameText">works.</h2>
+            <h2 id = "blank3" class = "blank">Tag 2</h2>
+            <h2 id = "gametext3" class = "gameText"> has</h2>
+            <br>
+            <button id = "higher" onclick= "checkResponseHigher()">Higher</button>
+            <br>
+            <button id = "lower" onclick = "checkResponseLower()">Lower</button>
+            <br>
+            <br>
+            <h2 id = "gametext4" class = "gameText">works.</h2>
+
+        </div>
+       <div id = "filter">
+              
+            <h3> Filter</h3>
+           
+                <br>
+           
+                <div id= "checkboxes">
+                <input type="checkbox" id="Additional Tags" name="Additional Tags" value="yes" class= "aCheckbox"> 
+                <label for="Additional Tags"> Additional Tags </label>
+                <br>
+
+                <input type="checkbox" id="Fullmetal Alchemist" name="Fullmetal Alchemist" value="yes" class= "aCheckbox"> 
+                <label for="Fullmetal Alchemist"> Fullmetal Alchemist</label>
+                 <br>
+  
+                <input type="checkbox" id="Genshin Impact" name="Genshin Impact" value="yes" class= "aCheckbox"> 
+                <label for="Genshin Impact"> Genshin Impact </label>
+                <br>
+
+                <input type="checkbox" id="Harry Potter" name="Harry Potter" value="yes" class= "aCheckbox"> 
+                  <label for="Harry Potter"> Harry Potter</label>
+                   <br>
+  
+                 <input type="checkbox" id="Hunter x Hunter" name="Hunter x Hunter" value="yes" class= "aCheckbox"> 
+                <label for="Hunter x Hunter"> Hunter x Hunter</label>
+                 <br>
+  
+                 <input type="checkbox" id="Marvel" name="Marvel" value="yes" class= "aCheckbox"> 
+                <label for="Marvel"> Marvel (All Media Types)</label>
+                 <br>
+
+                 <input type="checkbox" id="Misc. RPF" name="Misc. RPF" value="yes" class= "aCheckbox"> 
+                 <label for="Misc. RPF"> Misc. RPF</label>
+                 <br>
+
+                 <input type="checkbox" id="My Hero Academia" name="My Hero Academia" value="yes" class= "aCheckbox"> 
+                 <label for="My Hero Academia"> My Hero Academia</label>
+                  <br>
+
+                  <input type="checkbox" id="Sherlock (TV)" name="Sherlock (TV)" value="yes" class= "aCheckbox"> 
+                  <label for="Sherlock (TV)"> Sherlock (TV)</label>
+                      <br>
+  
+                 <input type="checkbox" id="Star Wars" name="Star Wars" value="yes" class= "aCheckbox"> 
+                 <label for="Star Wars"> Star Wars (All Media Types)</label>
+                  <br>
+  
+                <input type="checkbox" id="Supernatural" name="Supernatural" value="yes" class= "aCheckbox"> 
+                   <label for="Supernatural"> Supernatural</label>
+                    <br>
+                
+                <input type="checkbox" id="Teen Wolf (TV)" name="Teen Wolf (TV)" value="yes" class= "aCheckbox"> 
+                <label for="Teen Wolf (TV)"> Teen Wolf</label>
+                <br>
+
+                <input type="checkbox" id="Haikyuu!!" name="Haikyuu!" value="yes" class= "aCheckbox"> 
+                <label for="Haikyuu!"> Haikyuu!</label>
+                <br>
+
+                <input type="checkbox" id="Dream SMP" name="Dream SMP" value="yes" class= "aCheckbox"> 
+                <label for="Dream SMP"> Dream SMP</label>
+                <br>
+
+                <input type="checkbox" id="DCU" name="DCU" value="yes" class= "aCheckbox"> 
+                <label for="DCU"> DCU</label>
+ 
+                      <br>
+
+                    
+                    </div>
+                <br>
+                <div id = "buttonWrap">
+                <button id="closeButton">Close</button>
+                <br>
+                <button id="goButton">Go</button>
+            </div>
+         </div>   
+
+        <div id ="correct" class = "popup" class ="feedback">
+            <h2> Correct!</h2>
+            <h2 id= "correctTag" class= "blank">Second tag</h2>
+            <h2 class= "popupText">has </h2>
+            <h2 id = "correctBlank" class= "blank">y </h2>
+            <h2 class= "popupText">works!"</h2>
+        </div>
+
+        <div id ="incorrectHigher" class = "popup" class ="feedback" class ="incorrect">
+           <div class="popupWrap">
+            <h1 id="gameOver"> Game Over!</h1>
+
+            <h2 id= "incorrectTag" class= "blank">Second tag</h2> 
+            <h2 class= "popupText">only has</h2>
+            <h2 id = "incorrectBlank" >y </h2>
+            <h2 class= "popupText">works!</h2>
+            <br>
+            <h2 id="otherTag" class= "blank"> </h2> 
+            <h2 class= "popupText"> has</h2>
+            <h2 id = "otherWorks" class= "blank"></h2>
+            <h2 class= "popupText">. <br> That's </h2>
+            <h2 id="higherDiff" class= "blank"></h2>
+            <h2> less!</h2>
+            <br>
+             <h2 class= "popupText">Your score was </h2>
+            <h2 id="finalScore" class= "blank"></h2>
+            <br>
+            <br>
+           <button id = "playAgainHigher" onclick= "runGame()">Play Again</button>
+            <a href = "index.html"><button>Home</button></a>
+        </div>
         </div>
 
 
+        <div id ="incorrectLower" class = "popup" class ="feedback" class ="incorrect">
+            <div class="popupWrap">
+            <h1 id="gameOver"> Game Over!</h1>
+
+            <h2 id= "incorrectTagL" class= "blank">Second tag</h2> 
+            <h2 class= "popupText">has </h2>
+            <h2 id = "incorrectBlankL" class= "blank">y </h2>
+            <h2 class= "popupText">works!</h2>
+            <br>
+            <h2 id="otherTagL" class= "blank"> </h2> 
+            <h2 class= "popupText"> has</h2>
+            <h2 id = "otherWorksL" class= "blank"></h2>
+            <h2 class= "popupText">.<br> That's </h2>
+            <h2 id="lowerDiff" class= "blank"></h2>
+            <h2> more!</h2>
+            <br>
+             <h2 class= "popupText">Your Score was </h2>
+            <h2 id="finalScoreL" class= "blank"></h2>
+            <br>
+            <br>
+            <button id= "playAgainLower" onclick= "runGame()">Play Again</button>
+            <a href = "index.html"><button>Home</button></a>
+            </div>
+        </div>
+
+    
     </main>
 
     <footer>
 
-        <p id="disclaimer">Random Fandom Game is fanmade and not affilliated with Archive of Our Own or the OTW.</p>
-
     </footer>
 </body>
+<script src="data.js" defer></script>
+<script src="/script.js" defer></script>
 </html>
