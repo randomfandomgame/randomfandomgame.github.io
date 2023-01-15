@@ -546,7 +546,7 @@ function displayValues()
 {
     console.log("display values");
     document.getElementById("blank1").innerHTML =firstTag;
-    document.getElementById("blank2").innerHTML =firstWorks;
+    document.getElementById("blank2").innerHTML =firstWorks.toLocaleString("en-US");
     document.getElementById("blank3").innerHTML =secondTag;
     console.log(firstTag + " has " + firstWorks + " works. ");
     console.log(secondTag + " has " + secondWorks);
@@ -613,12 +613,12 @@ function incorrectLower()
     {
         console.log("incorrect function runs");
         document.getElementById("incorrectTagL").innerHTML =secondTag;
-        document.getElementById("incorrectBlankL").innerHTML =secondWorks;
+        document.getElementById("incorrectBlankL").innerHTML =secondWorks.toLocaleString("en-US");
         document.getElementById("finalScoreL").innerHTML =score;
         document.getElementById("otherTagL").innerHTML =firstTag;
-        document.getElementById("otherWorksL").innerHTML =firstWorks;
+        document.getElementById("otherWorksL").innerHTML =firstWorks.toLocaleString("en-US");
         var lowerDiff = secondWorks-firstWorks;
-        document.getElementById("lowerDiff").innerHTML =lowerDiff;
+        document.getElementById("lowerDiff").innerHTML =lowerDiff.toLocaleString("en-US");
         document.getElementById("incorrectLower").style.display = "inline-block";
     }
 
@@ -626,20 +626,20 @@ function incorrectLower()
     {
         console.log("inc higher reached");
         document.getElementById("incorrectTag").innerHTML =secondTag;
-        document.getElementById("incorrectBlank").innerHTML =secondWorks;
+        document.getElementById("incorrectBlank").innerHTML =secondWorks.toLocaleString("en-US");
         document.getElementById("finalScore").innerHTML =score;
         document.getElementById("otherTag").innerHTML =firstTag;
-        document.getElementById("otherWorks").innerHTML =firstWorks;
+        document.getElementById("otherWorks").innerHTML =firstWorks.toLocaleString("en-US");
         var higherDiff = firstWorks-secondWorks;
-        document.getElementById("higherDiff").innerHTML =higherDiff;
+        document.getElementById("higherDiff").innerHTML =higherDiff.toLocaleString("en-US");
         document.getElementById("incorrectHigher").style.display = "inline-block";
     }
 
 function displayCorrectScreen()
     {
         console.log("Display correct screen runs");
-        document.getElementById("correctTag").innerHTML =secondTag;
-        document.getElementById("correctBlank").innerHTML =secondWorks;
+        document.getElementById("correctTag").innerHTML =secondTag.toLocaleString("en-US");
+        document.getElementById("correctBlank").innerHTML =secondWorks.toLocaleString("en-US");
         document.getElementById("correct").style.display = "inline-block";
         score++;
         document.getElementById("scoreSlot").innerHTML =score;
